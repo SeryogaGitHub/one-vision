@@ -1,0 +1,56 @@
+@import url(./default.less);
+
+.center {
+  position: relative;
+  max-width: 1240px;
+  padding: 0 15px;
+  width: 100%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .main-nav {
+    display: flex !important;
+  }
+}
+.flex-container{
+  display: flex;
+
+  & > *{
+    flex: 1 1;
+  }
+}
+.item{
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1px;
+  padding: 1vw;
+  border: 1px solid;
+  text-align: center;
+
+  &.w-150{
+    max-width: 150px;
+  }
+  &.w-60p{
+    flex-basis: 60%;
+  }
+  &.w-40p{
+    flex-basis: 40%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  .tab-hide{
+    display: none;
+  }
+}
+@media screen and (max-width: 768px){
+  .flex-container{
+    display: block;
+  }
+  .item{
+    &.w-150{
+      max-width: initial;
+    }
+  }
+}
